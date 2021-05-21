@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+.arrow{
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+.custom-select{
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    width: 100px;
+    font-size: 16px;
+}
+.custom-select-div{
+    
+}
+
+.logo{
+    font-family: 'Pattaya', sans-serif;
+    font-size: 50px;
+    color:#ac2f2f;
+    text-decoration: none;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+.drap{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 32px;
+    height: 32px;
+}
+.bg {
+    background-image: url("../assets/cyber_bg.gif");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main_div{
+    
+    padding: 10px;
+    height: 500px;
+}
+#generator_div{
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+
+}
+#story{
+    height: 500px;
+    background-color:#944FC9 ;
+}
+#story2{
+    height: 500px;
+    background-color:#6C567D ;
+}
+.flex{
+    align-items: baseline;
+    font-family: 'Roboto';
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.input_flex{
+    margin-right: 10px;
+}
+.div_title{
+    text-align: center;
+    font-family: 'F37 Ginger Light', Helvetica, Arial , sans-serif;
+    font-size: 36px;
+    color: #10069F;
+}
+.select{
+    margin: 10px;
+}
