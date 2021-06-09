@@ -55,7 +55,7 @@ body, html {
 .main_div{
     
     padding: 10px;
-    height: 500px;
+    height: 1000px;
 }
 #generator_div{
     padding: 10px;
@@ -63,13 +63,25 @@ body, html {
     border-radius: 10px;
 
 }
+#two_div_side{
+    display: flex;
+}
+img{
+    width: 50%;
+    border-radius: 10px;
+
+}
+.text_bloc{
+    background-color:#944FC9;
+    border-radius: 10px;
+}
 #story{
     height: 500px;
+    width: 50%;
     background-color:#944FC9 ;
 }
 #story2{
     height: 500px;
-    background-color:#6C567D ;
 }
 .flex{
     align-items: baseline;
@@ -87,6 +99,47 @@ body, html {
     font-size: 36px;
     color: #10069F;
 }
+#inside_div{
+    border: 2mm solid yellow;
+    width: 60%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 1024px){
+#inside_div{
+    border: 2mm solid yellow;
+    width: 80%;
+    padding: 20px;
+}
+}
 .select{
     margin: 10px;
+}
+#generate_button{
+    display: flex;
+    justify-content: center;
+}
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.title_bloc{
+    font-size: 25px;
 }

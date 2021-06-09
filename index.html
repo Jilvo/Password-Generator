@@ -35,26 +35,30 @@
   <div id="main_nav" class="main_div">
     <div id="generator_div">
         <p class="div_title">Sélectionnez les options de votre mot de passe sécurisé:</p>
-      <div>
+      <div id="inside_div">
         <div class="flex">
-          <input class='input_flex' type="checkbox" id="number" name="number" value="number">
+          <input class='input_flex' type="checkbox" id="number" name="number" value="">
           <p>Avec des chiffres [ 0 1 2 3 4 5 6 7 8 9 ]</p>
         </div>
         <div class="flex">
-          <input class='input_flex' type="checkbox" id="number" name="number" value="number">
+          <input class='input_flex' type="checkbox" id="min_char" name="min_char" value="">
           <p>Avec des lettres minuscules [ a b c ... x y z ]</p>
         </div>
         <div class="flex">
-          <input class='input_flex' type="checkbox" id="number" name="number" value="number">
+          <input class='input_flex' type="checkbox" id="maj_char" name="maj_char" value="">
           <p>Avec des lettres majuscules [ A B C ... X Y Z ]</p>
         </div>
         <div class="flex">
-          <input class='input_flex' type="checkbox" id="number" name="number" value="number">
+          <input class='input_flex' type="checkbox" id="special_char" name="special_char" value="">
           <p>Avec des caractères spéciaux [ ~ ! @ # $ % ^ & * ( ) - _ = + [ ] { } ; : , . < > / ? | ]</p>
         </div>
         <div class="flex">
-          <input class='input_flex' type="checkbox" id="number" name="number" value="number">
+          <input class='input_flex' type="checkbox" id="similar_char" name="similar_char" value="">
           <p>Exclure les caractères similaires [ 0 O I 1 l ]</p>
+        </div>
+        <div class="flex">
+          <input class='input_flex' type="input" id="length" name="length" value="">
+          <p>Nombre de caractères du mot de passe</p>
         </div>
         <div class="flex select">
           <select id="number_char" class="select">
@@ -74,12 +78,50 @@
             <option value="3">3</option>
           </select>Nombre de mots de passe à créer (générer plusieurs mots de passe à la fois)
         </div>
+        <div id="generate_button">
+        <button class="button" id="generate" onclick="generate_pwd()">Generer</button>
+        </div>
       </div>
     </div>
   </div>
-  <div id="story">
-  </div>
-  <div id="story2">
-  </div>
+    <div id="two_div_side"><img src="static/assets/photo1.jpg"><div class="text_bloc"><p class="title_bloc">Les règles à respecter pour créer un bon mot de passe</p><p>Règle n°1 : 12 caractères
+      Un mot de passe sécurisé doit comporter au moins 12 caractères. Il peut être éventuellement plus court si le compte propose des sécurités complémentaires comme le verrouillage du compte après plusieurs échecs, un test de reconnaissance de caractères ou d’images (« captcha »), la nécessité d’entrer des informations complémentaires communiquées par un autre moyen qu’internet (exemple : un identifiant administratif envoyé par La Poste), etc.
+      
+      Règle n°2 : des chiffres, des lettres, des caractères spéciaux
+      Votre mot de passe doit se composer de 4 types de caractères différents : majuscules, minuscules, chiffres, et signes de ponctuation ou caractères spéciaux (€, #...).
+      
+      Règle n°3 : un mot de passe anonyme
+      Votre mot de passe doit être anonyme : il est très risqué d’utiliser un mot de passe avec votre date de naissance, le nom de votre chien etc., car il serait facilement devinable.
+      
+      Règle n°4 : la double authentification
+      Certains sites proposent de vous informer par mail ou par téléphone si quelqu’un se connecte à votre compte depuis un terminal nouveau. Vous pouvez ainsi accepter ou refuser la connexion. N'hésitez pas à utiliser cette option.
+      
+      Règle n°5 : renouvellement des mots de passe
+      Sur les sites où vous avez stocké des données sensibles, pensez à changer votre mot de passe régulièrement : tous les 3 mois parait être une fréquence raisonnable.
+      
+      Lire aussi : Achats en ligne : comment </p></div></div>
+    <div id="two_div_side"><div class="text_bloc"><p class="title_bloc">Comment retenir son mot de passe ?</p><p>Il est très important d’utiliser un mot de passe différent pour chaque compte. Vous devez donc construire plusieurs mots de passe, et pas question de les écrire dans un fichier texte, dans les notes de votre smartphone ou sur le cloud (informatique en nuage) : ils pourraient être facilement consultables. Alors, comment les retenir ? Deux options s’offrent à vous.
+
+      Créer un mot de passe à partir d’une phrase
+      La Commission nationale de l'informatique et des libertés (CNIL) a mis en place un générateur de mot de passe qui permet de créer son mot de passe à partir d’une phrase. Vous n’avez qu’à retenir la phrase et utiliser les initiales de la phrase pour créer votre mot de passe.
+      
+      Exemple : La phrase « Je crée un mot de passe super sécurisé ! Plus de 12 caractères et 4 types différents ! » permet de créer le mot de passe « Jcumdpss!Pd12ce4td! »
+      
+      
+      Utiliser un gestionnaire de mot de passe
+      Grâce à un gestionnaire de mots de passe chiffré, vous n’aurez plus qu’à retenir un seul mot de passe pour avoir accès à tous vos comptes. Pratique !
+      
+      Lire aussi : Dix règles à respecter pour être (presque) sûr de vous faire pirater votre ordinateur/p></div><img src="static/assets/photo2.jpg"></div>
+      <div id="two_div_side"><img src="static/assets/photo1.jpg"><div class="text_bloc"><p class="title_bloc">Quels risques à utiliser un même mot de passe pour plusieurs sites ?</p><p>Si un des sites sur lesquels vous avez un compte est victime de fuite de données comprenant vos moyens d’authentification, il sera alors facile pour les pirates d’accéder à vos informations personnelles. Ils pourraient utiliser vos identifiants et mots de passe pour se connecter à d’autres comptes. Soyez très vigilants, et surtout sur des comptes qui comportent des données sensibles (réseaux sociaux, boîte mail etc.).
+
+        Par exemple, s’il contrôle l’accès à vos comptes sur internet, un pirate pourrait :
+        
+        usurper votre boîte mail pour piéger vos contacts
+        utiliser vos données bancaires pour des achats frauduleux
+        usurper votre identité
+        demander une rançon s’il trouve des données compromettantes dans votre boîte mail</p></div></div>
+
+
+  
 </body>
 </html>
