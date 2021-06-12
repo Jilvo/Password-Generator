@@ -19,33 +19,34 @@ function generate_pwd(){
     var special_char = document.getElementById("special_char").checked;
     var similar_char = document.getElementById("similar_char").checked;
     var length = document.getElementById("length").value;
-    var number_char = document.getElementById("number_char").value;
+    // var number_char = document.getElementById("number_char").value;
     var number_pwd = document.getElementById("number_pwd").value;
-    var chaactersLength = "";
-    for (var i = 0; i < number_pwd; i++){
+    var list_pwd = [];
+    for (var count_pwd = 0; count_pwd < number_pwd; count_pwd++){
+        var chaactersLength = "";
         var result = "" ;
         if (number == true){
-            var chaactersLength = chaactersLength + number_list;
+            var chaacters = chaacters + number_list;
         }
         if (min_char == true){
-            var chaactersLength = chaactersLength + min_characters_list;
+            var chaacters = chaacters + min_characters_list;
         }
         if (maj_char == true){
-            var chaactersLength = chaactersLength + maj_char_list;
+            var chaacters = chaacters + maj_char_list;
         }
         if (special_char == true){
-            var chaactersLength = chaactersLength + special_list;
+            var chaacters = chaacters + special_list;
         }
         if (similar_char == true){
-            var chaactersLength = chaactersLength + similar_list;
+            var chaacters = chaacters + similar_list;
             ;
         }
-        var chaactersLength = chaactersLength.length;
-        // for ( var i = 0; i < length ; i++ ) {
-        //     result += characters.charAt(Math.floor(Math.random() * chaactersLength));
-        // }
-        console.log(result);
-        console.log(length)
+        var chaactersLength = chaacters.length;
+        for ( var i = 0; i < length ; i++ ) {
+            result += chaacters.charAt(Math.floor(Math.random() * chaactersLength));
+        }
+        list_pwd.push(result);
+        
     }
-    
+    alert(list_pwd);
 }
